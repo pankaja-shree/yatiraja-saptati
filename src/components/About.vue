@@ -65,7 +65,7 @@ import {
   QItem,
   QItemSide,
   QSideLink,
-  QItemMain,
+  QItemMain
 } from 'quasar'
 
 const
@@ -99,7 +99,7 @@ export default {
     QItem,
     QItemSide,
     QItemMain,
-    QSideLink,
+    QSideLink
   },
   data () {
     return {
