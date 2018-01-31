@@ -29,8 +29,8 @@
         <q-side-link item to="/about" exact>
           <q-item-main label="About" />
         </q-side-link>
-        <q-side-link item to="/test-layout/toolbar">
-          <q-item-main label="Toolbar" />
+        <q-side-link item to="/Slokas">
+          <q-item-main label="Slokas" />
         </q-side-link>
       </q-list>
     </div>
