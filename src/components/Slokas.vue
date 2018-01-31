@@ -26,6 +26,9 @@
 
       <q-list no-border link inset-delimiter>
         <q-list-header>Essential Links</q-list-header>
+        <q-side-link item to="/" exact>
+          <q-item-main label="Home" />
+        </q-side-link>
         <q-side-link item to="/about" exact>
           <q-item-main label="About" />
         </q-side-link>
