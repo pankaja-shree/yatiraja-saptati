@@ -35,6 +35,9 @@
         <q-side-link item to="/Slokas">
           <q-item-main label="Slokas" />
         </q-side-link>
+        <q-side-link item to="/contact">
+          <q-item-main label="Contact" />
+        </q-side-link>
       </q-list>
     </div>
 
