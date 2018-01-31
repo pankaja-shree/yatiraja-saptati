@@ -1,81 +1,214 @@
 <template>
-  <!-- Configure "view" prop for QLayout -->
-  <q-layout>
-    <q-toolbar slot="header">
-      <!-- opens drawer below
-      <button class="hide-on-drawer-visible" @click="$refs.drawer.open()">
-        <i>menu</i>
-      </button>
-      -->
+  <q-layout
+    ref="layout"
+    view="lHh Lpr fff"
+    :left-class="{'bg-grey-2': true}"
+  >
+    <q-toolbar slot="header" class="glossy">
+      <q-btn
+        flat
+        @click="$refs.layout.toggleLeft()"
+      >
+        <q-icon name="menu" />
+      </q-btn>
+
       <q-toolbar-title>
-        Title
+        Yatiraja Saptati
       </q-toolbar-title>
-      <p>Sri Bhagavath Ramanuja is referred here as Yathiraja (the King of Saints). Some of his other names are Sri Bhashyakara, Udaiyavar, Emperumaanaar, Yathipathi and Lakshmanamuni. No amount of adulation can be too high for the great deeds of Sri Ramanuja, which included among others, founding and upholding our Sri Sampradaya in the form of Sri Visishtaadvaita philosophy, against all odds. It is he who showed us that the means and end for all souls is Sriman Narayana and established the route to salvation. One can never be able to fully pay back for this benevolence but can only make an attempt by singing the praise of the Acharya. Yathiraja Sapthathi comprises 74 verses, perhaps signifying the number of the Simhaasanaadhipathis Sri Ramanuja appointed to enable our Sampradaya thrive.
-The hymn starts off with the first 10 slokas dedicated to the salutation of our Acharya Parampara, to which Sriman Narayana is the principal preceptor (Prathama Acharyan). The line-up in the descending order goes like this: The Lord, His Consort, Vishvaksena, Satakopa, Naathamunigal, UyyakKondaar, Manakkaal Nambi, Aala Vandhaar, Periya Nambi and Sri Ramanuja.
-The 11th verse beautifully describes the form and virtues of Sri Ramanuja. Thereupon, it is all the glory of Sri Bhashyakara, expressively, exhaustively and exquisitely brought forth as only Swami Desika can.
-Some of the most significant ones are given below with the sloka number in parentheses:
-Sri Ramanuja being an incarnation of the Five Weapons of the Lord (12); of Vishvaksena (32); and Dhaththaathreya (63). He being the lustrous pivotal pendant in the line-up of our Sampradaya Acharyas (15). His feet being more important for salvation than even that of the Lord (20). The implication of his preaching-gesture (24 & 25). Sri Ramanuja being an amalgam of the three luminous bodies — the Fire, the Moon and the Sun (27). He being the saviour of the Supreme Being (Brahmam) from the devious designs of perverted schools of philosophy (38). The enormity and greatness of his works (47 to 54). The fate of the detractors of his distinguished works (55). The pure water from a well (SaalaikKinaru) offered to Lord Varadaraja by Sri Ramanuja, in turn, taking the form of showers of mercy pouring on us in all its abundance (62). The divine works of Sri Ramanuja investing in him (Sri Desika) all-conquering power (68). The greatness of the dust of the feet of Sri Ramanuja (64). Other philosophies taking a hurried hiding in front of Sri Ramanuja Sidhdhantha — Visishtaadvaita (70).
-The author brings into play dual connotations aplenty in this virtuoso composition of his. Especially enchanting among them are: the ones involving Lord Krishna and Sri Ramanuja (13th sloka); Sri Ramanuja and a mountain (16); the great works of Sri Ramanuja and the Kalpa tree (31).
- In a categorical exposition of his contrasting attitude towards those who tread Sri Ramanuja's path and the others, Swami Desika declares thus in the 41st sloka: "I bear the lotus foot of the noble followers of Sri Ramanuja on my bowed head forever. By the same token, let it also be known that my left foot will be placed on the head of those with a raging madness in espousing the cause of other schools of philosophy." A classic metaphor marks the 72nd sloka, in which Sri Desika suggests that (it is enough) the roar of 'Kavi-Thaarkika Simham' — that is Yathiraja Sapthathi — be passed on to the ears of the rivals who entertain the thought of meeting us in a debate." Finally, as phala sruti, the author prays in sloka 73, "May the hymn bestow on the reader devotional intellect which encompasses both the worlds of the Lord — Leela Vibhuthi and Nithya Vibhuthi." And the concluding verse declares that those who learn the hymn will see the righteous path as clearly as a gooseberry in the palm and shall shine in the world so lustrously as to render the jealous rivals as ineffective as stars in the daytime.
-</p>
     </q-toolbar>
 
-    <!-- Navigation Tabs
-    <q-tabs slot="navigation">
-      <q-route-tab slot="title" icon="view_quilt" to="/layout/about" replace hide="icon" label="About" />
-      <q-route-tab slot="title" icon="view_day" to="/layout/toolbar" replace hide="icon" label="Toolbar" />
-      <q-route-tab slot="title" icon="view_day" to="/layout/tabs" replace label="Tabs" />
-      <q-route-tab slot="title" icon="input" to="/layout/drawer" replace label="Drawer" />
-    </q-tabs>
-    -->
-
-    <!-- Left Side Panel
     <div slot="left">
+      <!--
+        Use <q-side-link> component
+        instead of <q-item> for
+        internal vue-router navigation
+      -->
+
       <q-list no-border link inset-delimiter>
         <q-list-header>Essential Links</q-list-header>
-        <q-item>
-          <q-item-side icon="school" />
-          <q-item-main label="Docs" sublabel="quasar-framework.org" />
-        </q-item>
-        <q-item>
-          <q-item-side icon="record_voice_over" />
-          <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
-        </q-item>
-        <q-item>
-          <q-item-side icon="chat" />
-          <q-item-main label="Gitter Channel" sublabel="Quasar Lobby" />
-        </q-item>
-        <q-item>
-          <q-item-side icon="rss feed" />
-          <q-item-main label="Twitter" sublabel="@quasarframework" />
-        </q-item>
+        <q-side-link item to="/" exact>
+          <q-item-main label="Home" />
+        </q-side-link>
+        <q-side-link item to="/about" exact>
+          <q-item-main label="About" />
+        </q-side-link>
+        <q-side-link item to="/Slokas">
+          <q-item-main label="Slokas" />
+        </q-side-link>
       </q-list>
     </div>
-    -->
 
-    <!-- Right Side Panel
-    <div slot="right">
-      ...
+    <!--
+      Replace following <div> with
+      <router-view /> component
+      if using subRoutes
+    -->
+    <router-view></router-view>
+    <div class = "light-paragraph" style="padding: 5%">
+      Sri Bhagavath Ramanuja is referred here as Yathiraja (the King of Saints). Some of his other names are Sri Bhashyakara, Udaiyavar, Emperumaanaar, Yathipathi and Lakshmanamuni. No amount of adulation can be too high for the great deeds of Sri Ramanuja, which included among others, founding and upholding our Sri Sampradaya in the form of Sri Visishtaadvaita philosophy, against all odds. It is he who showed us that the means and end for all souls is Sriman Narayana and established the route to salvation. One can never be able to fully pay back for this benevolence but can only make an attempt by singing the praise of the Acharya. Yathiraja Sapthathi comprises 74 verses, perhaps signifying the number of the Simhaasanaadhipathis Sri Ramanuja appointed to enable our Sampradaya thrive.
     </div>
-    -->
-
-    <router-view />
-
-    <!-- Footer
-    <q-toolbar slot="footer">
-      ...
-    </q-toolbar>
-    -->
   </q-layout>
 </template>
 
 <script>
+import {
+  dom,
+  event,
+  openURL,
+  QLayout,
+  QToolbar,
+  QToolbarTitle,
+  QBtn,
+  QIcon,
+  QList,
+  QListHeader,
+  QItem,
+  QItemSide,
+  QSideLink,
+  QItemMain,
+} from 'quasar'
+
+const
+  { viewport } = dom,
+  { position } = event,
+  moveForce = 30,
+  rotateForce = 40,
+  RAD_TO_DEG = 180 / Math.PI
+
+function getRotationFromAccel (accelX, accelY, accelZ) {
+  /* Reference: http://stackoverflow.com/questions/3755059/3d-accelerometer-calculate-the-orientation#answer-30195572 */
+  const sign = accelZ > 0 ? 1 : -1
+  const miu = 0.001
+
+  return {
+    roll: Math.atan2(accelY, sign * Math.sqrt(Math.pow(accelZ, 2) + miu * Math.pow(accelX, 2))) * RAD_TO_DEG,
+    pitch: -Math.atan2(accelX, Math.sqrt(Math.pow(accelY, 2) + Math.pow(accelZ, 2))) * RAD_TO_DEG
+  }
+}
+
 export default {
+  name: 'index',
+  components: {
+    QLayout,
+    QToolbar,
+    QToolbarTitle,
+    QBtn,
+    QIcon,
+    QList,
+    QListHeader,
+    QItem,
+    QItemSide,
+    QItemMain,
+    QSideLink,
+  },
   data () {
-    return {}
+    return {
+      orienting: window.DeviceOrientationEvent && !this.$q.platform.is.desktop,
+      rotating: window.DeviceMotionEvent && !this.$q.platform.is.desktop,
+      moveX: 0,
+      moveY: 0,
+      rotateY: 0,
+      rotateX: 0
+    }
+  },
+  computed: {
+    position () {
+      const transform = `rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg)`
+      return {
+        top: this.moveY + 'px',
+        left: this.moveX + 'px',
+        '-webkit-transform': transform,
+        '-ms-transform': transform,
+        transform
+      }
+    }
+  },
+  methods: {
+    launch (url) {
+      openURL(url)
+    },
+    move (evt) {
+      const
+        {width, height} = viewport(),
+        {top, left} = position(evt),
+        halfH = height / 2,
+        halfW = width / 2
+
+      this.moveX = (left - halfW) / halfW * -moveForce
+      this.moveY = (top - halfH) / halfH * -moveForce
+      this.rotateY = (left / width * rotateForce * 2) - rotateForce
+      this.rotateX = -((top / height * rotateForce * 2) - rotateForce)
+    },
+    rotate (evt) {
+      if (evt.rotationRate &&
+          evt.rotationRate.beta !== null &&
+          evt.rotationRate.gamma !== null) {
+        this.rotateX = evt.rotationRate.beta * 0.7
+        this.rotateY = evt.rotationRate.gamma * -0.7
+      }
+      else {
+        /* evt.acceleration may be null in some cases, so we'll fall back
+           to evt.accelerationIncludingGravity */
+        const
+          accelX = evt.acceleration.x || evt.accelerationIncludingGravity.x,
+          accelY = evt.acceleration.y || evt.accelerationIncludingGravity.y,
+          accelZ = evt.acceleration.z || evt.accelerationIncludingGravity.z - 9.81,
+          rotation = getRotationFromAccel(accelX, accelY, accelZ)
+
+        this.rotateX = rotation.roll * 0.7
+        this.rotateY = rotation.pitch * -0.7
+      }
+    },
+    orient (evt) {
+      if (evt.beta === null || evt.gamma === null) {
+        window.removeEventListener('deviceorientation', this.orient, false)
+        this.orienting = false
+
+        window.addEventListener('devicemotion', this.rotate, false)
+      }
+      else {
+        this.rotateX = evt.beta * 0.7
+        this.rotateY = evt.gamma * -0.7
+      }
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      if (this.orienting) {
+        window.addEventListener('deviceorientation', this.orient, false)
+      }
+      else if (this.rotating) {
+        window.addEventListener('devicemove', this.rotate, false)
+      }
+      else {
+        document.addEventListener('mousemove', this.move)
+      }
+    })
+  },
+  beforeDestroy () {
+    if (this.orienting) {
+      window.removeEventListener('deviceorientation', this.orient, false)
+    }
+    else if (this.rotating) {
+      window.removeEventListener('devicemove', this.rotate, false)
+    }
+    else {
+      document.removeEventListener('mousemove', this.move)
+    }
   }
 }
 </script>
 
-<style>
+<style lang="stylus">
+.logo-container
+  width 255px
+  height 242px
+  perspective 800px
+  position absolute
+  top 50%
+  left 50%
+  transform translateX(-50%) translateY(-50%)
+.logo
+  position absolute
+  transform-style preserve-3d
 </style>
