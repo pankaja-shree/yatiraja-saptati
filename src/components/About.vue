@@ -43,7 +43,7 @@
       <router-view /> component
       if using subRoutes
     -->
-    <router-view></router-view>
+
     <div class = "light-paragraph" style="padding: 5%">
       Sri Bhagavath Ramanuja is referred here as Yathiraja (the King of Saints). Some of his other names are Sri Bhashyakara, Udaiyavar, Emperumaanaar, Yathipathi and Lakshmanamuni. No amount of adulation can be too high for the great deeds of Sri Ramanuja, which included among others, founding and upholding our Sri Sampradaya in the form of Sri Visishtaadvaita philosophy, against all odds. It is he who showed us that the means and end for all souls is Sriman Narayana and established the route to salvation. One can never be able to fully pay back for this benevolence but can only make an attempt by singing the praise of the Acharya. Yathiraja Sapthathi comprises 74 verses, perhaps signifying the number of the Simhaasanaadhipathis Sri Ramanuja appointed to enable our Sampradaya thrive.
     </div>
