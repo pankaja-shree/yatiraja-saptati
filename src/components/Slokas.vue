@@ -46,13 +46,12 @@
       <router-view /> component
       if using subRoutes
     -->
-    <div class="row justify-center items-center content-center">
+    <div class="row justify-around items-center content-center">
       <div class="column">
         <q-btn icon="play_circle_outline" glossy color="secondary">Play all</q-btn>
       </div>
       <div class="column">
         <q-field
-          icon="music_note"
           label="Select Sloka to play"
         >
         <q-select
@@ -63,9 +62,9 @@
         />
         </q-field>
       </div>
-    </div>
-
-    <div class="row justify-center items-center content-center">
+      <div class="column">
+        <q-btn icon="repeat" glossy color="secondary">Repeat</q-btn>
+      </div>
       <div class="column">
         <q-search v-model="search" />
       </div>
