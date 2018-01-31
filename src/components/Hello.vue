@@ -13,8 +13,7 @@
       </q-btn>
 
       <q-toolbar-title>
-        Quasar App
-        <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
+        Yatiraja Saptati
       </q-toolbar-title>
     </q-toolbar>
 
@@ -27,22 +26,12 @@
 
       <q-list no-border link inset-delimiter>
         <q-list-header>Essential Links</q-list-header>
-        <q-item @click="launch('http://quasar-framework.org')">
-          <q-item-side icon="school" />
-          <q-item-main label="Docs" sublabel="quasar-framework.org" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-side icon="record_voice_over" />
-          <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
-        </q-item>
-        <q-item @click="launch('https://gitter.im/quasarframework/Lobby')">
-          <q-item-side icon="chat" />
-          <q-item-main label="Gitter Channel" sublabel="Quasar Lobby" />
-        </q-item>
-        <q-item @click="launch('https://twitter.com/quasarframework')">
-          <q-item-side icon="rss feed" />
-          <q-item-main label="Twitter" sublabel="@quasarframework" />
-        </q-item>
+        <q-side-link item to="/about" exact>
+          <q-item-main label="About" />
+        </q-side-link>
+        <q-side-link item to="/test-layout/toolbar">
+          <q-item-main label="Toolbar" />
+        </q-side-link>
       </q-list>
     </div>
 
@@ -51,11 +40,8 @@
       <router-view /> component
       if using subRoutes
     -->
-    <div class="layout-padding logo-container non-selectable no-pointer-events">
-      <div class="logo" :style="position">
-        <img src="~assets/quasar-logo-full.svg">
-      </div>
-    </div>
+    <router-view></router-view>
+
   </q-layout>
 </template>
 
@@ -73,6 +59,7 @@ import {
   QListHeader,
   QItem,
   QItemSide,
+  QSideLink,
   QItemMain
 } from 'quasar'
 
@@ -106,7 +93,8 @@ export default {
     QListHeader,
     QItem,
     QItemSide,
-    QItemMain
+    QItemMain,
+    QSideLink
   },
   data () {
     return {
