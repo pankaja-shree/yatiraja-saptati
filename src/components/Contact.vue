@@ -73,7 +73,9 @@
 />
     </q-field>
 </div>
-<div class="row"></div>
+<div class="row justify-center">
+  <q-btn color="secondary" icon="send">Submit</q-btn>
+</div>
 
   </q-layout>
 </template>
