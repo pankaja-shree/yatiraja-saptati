@@ -46,7 +46,34 @@
       <router-view /> component
       if using subRoutes
     -->
-    <router-view></router-view>
+<div class="row justify-center">
+  <q-field
+  icon="mail"
+  label="Your Email"
+  helper="Helper"
+  :error="mailHasError"
+  error-label="We need a valid email"
+  :count="10"
+>
+  <q-input suffix="@gmail.com" v-model="model" />
+</q-field>
+</div>
+<div class="row justify-center">
+    <q-field
+  icon="comment"
+  label="Your Feedback"
+>
+  <q-input
+  placeholder="Comments, Report Error, etc..."
+  v-model="feedback"
+  type="textarea"
+  float-label="Textarea"
+  :max-height="100"
+  :min-rows="7"
+/>
+    </q-field>
+</div>
+<div class="row"></div>
 
   </q-layout>
 </template>
@@ -66,7 +93,9 @@ import {
   QItem,
   QItemSide,
   QSideLink,
-  QItemMain
+  QItemMain,
+  QInput,
+  QField
 } from 'quasar'
 
 const
@@ -100,7 +129,9 @@ export default {
     QItem,
     QItemSide,
     QItemMain,
-    QSideLink
+    QSideLink,
+    QInput,
+    QField
   },
   data () {
     return {
@@ -109,7 +140,8 @@ export default {
       moveX: 0,
       moveY: 0,
       rotateY: 0,
-      rotateX: 0
+      rotateX: 0,
+      feedback: ''
     }
   },
   computed: {
