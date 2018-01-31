@@ -43,7 +43,30 @@
       <router-view /> component
       if using subRoutes
     -->
-    <q-btn icon="play_circle_outline" glossy color="secondary">Play all</q-btn>
+    <div class="row justify-center items-center content-center">
+      <div class="column">
+        <q-btn icon="play_circle_outline" glossy color="secondary">Play all</q-btn>
+      </div>
+      <div class="column">
+        <q-field
+          icon="music_note"
+          label="Select Sloka to play"
+        >
+        <q-select
+          static-label="Select Sloka to Play"
+          multiple
+          v-model="multipleSelect"
+          :options="selectOptions"
+        />
+        </q-field>
+      </div>
+    </div>
+
+    <div class="row justify-center items-center content-center">
+      <div class="column">
+        <q-search v-model="search" />
+      </div>
+    </div>
 
   </q-layout>
 </template>
@@ -63,7 +86,10 @@ import {
   QItem,
   QItemSide,
   QSideLink,
-  QItemMain
+  QItemMain,
+  QSelect,
+  QField,
+  QSearch
 } from 'quasar'
 
 const
@@ -97,7 +123,10 @@ export default {
     QItem,
     QItemSide,
     QItemMain,
-    QSideLink
+    QSideLink,
+    QSelect,
+    QField,
+    QSearch
   },
   data () {
     return {
@@ -106,7 +135,18 @@ export default {
       moveX: 0,
       moveY: 0,
       rotateY: 0,
-      rotateX: 0
+      rotateX: 0,
+      selectOptions: [
+        {
+          label: 'Google',
+          value: 'goog'
+        },
+        {
+          label: 'Facebook',
+          value: 'fb'
+        }
+      ],
+      multipleSelect: []
     }
   },
   computed: {
