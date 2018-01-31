@@ -47,9 +47,8 @@
       if using subRoutes
     -->
 
-    <div class = "light-paragraph" style="padding: 5%">
-      Sri Bhagavath Ramanuja is referred here as Yathiraja (the King of Saints). Some of his other names are Sri Bhashyakara, Udaiyavar, Emperumaanaar, Yathipathi and Lakshmanamuni. No amount of adulation can be too high for the great deeds of Sri Ramanuja, which included among others, founding and upholding our Sri Sampradaya in the form of Sri Visishtaadvaita philosophy, against all odds. It is he who showed us that the means and end for all souls is Sriman Narayana and established the route to salvation. One can never be able to fully pay back for this benevolence but can only make an attempt by singing the praise of the Acharya. Yathiraja Sapthathi comprises 74 verses, perhaps signifying the number of the Simhaasanaadhipathis Sri Ramanuja appointed to enable our Sampradaya thrive.
-    </div>
+    <div  style="padding: 5%">
+Yatiraja Saptati is an outstanding devotional lyric composed by Vedanta Desika glorifying the remarkable abilities of Acarya Ramanuja in interpreting the Upanishadic Texts, Brahmasutas and Bhagavad Gita. It seems he hails the prowess of Acarya Ramanuja in silencing the wrong interpretations given to Vedic passages by the heterodox systems and also some of the orthodox systems. It appears Vedanta Desika composed this devotional lyric to Acarya Ramanuja in Tirunarayanapuram (Melukote), considered to be the place of victory (Samyami Sarvabhouma Vijaya Sthanam) and also known as Jnanamantapa. Strangely enough, there is an inscription in the Melukote temple regarding grants given to the chanting of this Yatiraja Saptati thrice a day in the temple to glorify the matchless ability of Ramanuja in silencing his adversaries.      </div>
   </q-layout>
 </template>
 
