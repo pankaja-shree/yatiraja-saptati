@@ -43,7 +43,7 @@
       <router-view /> component
       if using subRoutes
     -->
-    <router-view></router-view>
+    <q-btn icon="play_circle_outline" glossy color="secondary">Play all</q-btn>
 
   </q-layout>
 </template>
